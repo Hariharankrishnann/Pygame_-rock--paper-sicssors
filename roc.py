@@ -1,5 +1,9 @@
 from random import randint
- 
+ def speak(str):
+    from win32com.client import Dispatch
+    speak=Dispatch("SAPI.spVoice")
+    speak.Speak(str)
+    
 #create a list of play options
 t = ["Rock", "Paper", "Scissors"]
  
